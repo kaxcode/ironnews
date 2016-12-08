@@ -1,0 +1,30 @@
+.page-header
+  = link_to new_story_path, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Story
+  %h1 Listing stories
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Title
+        %th Link
+        %th Email
+        %th{colspan: 3}
+
+    %tbody
+      - @stories.each do |story|
+        %tr
+          %td= story.title
+          %td= story.link
+          %td= story.email
+          %td
+            = link_to story do
+              %span.glyphicon.glyphicon-ok
+          %td
+            = link_to edit_story_path(story) do
+              %span.glyphicon.glyphicon-pencil
+          %td
+            = link_to story, data: { confirm: 'Are you sure?' }, method: :delete do
+              %span.glyphicon.glyphicon-remove
