@@ -9,8 +9,8 @@
     %thead
       %tr
         %th #
+        %th Vote
         %th Title
-        %th Link
         %th Email
         %th Created on
         %th{colspan: 3}
@@ -19,11 +19,13 @@
       - @stories.each_with_index do |story, index|
         %tr
           %td= "#{index + 1}"
-          %td= story.title
-          -# %td= link_to "Wow, Ruby is awesome", "http://google.com"
-          %td= story.link
+          -# %td= button_to "glyphicon glyphicon-chevron-up", method: :post
+          %td
+            %i.fa.fa-arrow-up{"aria-hidden" => "true"}
+            %i.fa.fa-arrow-down{"aria-hidden" => "true"}
+          %td= link_to story.title, story.link
           %td= story.email
-          %td= story.created_at
+          %td= story.created_at.strftime("%m/%d/%Y at %I:%M %p")
           %td
             = link_to story do
               %span.glyphicon.glyphicon-ok
