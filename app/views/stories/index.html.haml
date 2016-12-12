@@ -1,8 +1,12 @@
 .page-header
+  = link_to login_path, class: 'btn btn-info' do
+    Login
+  = link_to signup_path, class: 'btn btn-success' do
+    Signup
   = link_to new_story_path, class: 'btn btn-primary' do
     %span.glyphicon.glyphicon-plus
     New Story
-  %h1 Listing stories
+  %h1 Iron News Stories
 
 .table-responsive
   %table.table.table-striped.table-bordered.table-hover
