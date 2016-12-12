@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
 
   # GET /stories/1
   def show
+    redirect_to stories_path
     @story = Story.find(params[:id])
   end
 

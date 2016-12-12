@@ -5,3 +5,30 @@
   Password: #{f.password_field :password}
   Password Confirmation: #{f.password_field :password_confirmation}
   \#{f.submit "Submit"}
+
+
+-# .container
+-#   .row
+-#     .panel.panel-primary
+-#       .panel-body
+-#         %form{:action => "#", :method => "POST", :role => "form"}
+-#           .form-group
+-#             %h2 Create account
+-#           .form-group
+-#             %label.control-label{:for => "name"} Name
+-#             %input#name.form-control{:maxlength => "50", :type => "text"}/
+-#           .form-group
+-#             %label.control-label{:for => "email"} Email
+-#             %input#email.form-control{:maxlength => "50", :type => "email"}/
+-#           .form-group
+-#             %label.control-label{:for => "password"} Password
+-#             %input#password.form-control{:length => "40", :maxlength => "25", :placeholder => "at least 6 characters", :type => "password"}/
+-#           .form-group
+-#             %label.control-label{:for => "password_confirmation"} Password Confirmation
+-#             %input#password_confirmation.form-control{:maxlength => "25", :type => "password"}/
+-#           .form-group
+-#             %button#submit.btn.btn-info.btn-block{:type => "submit"} Create your account
+-#           %hr/
+-#           = succeed "Already have an account?" do
+-#             %p
+-#           %a{:href => "/"} Sign in
